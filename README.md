@@ -31,8 +31,8 @@ rust_decimal = "1"
 
 ```rust
 use rust_decimal::Decimal;
-use yookasa_sdk::{Auth, YookassaClient};
-use yookasa_sdk::model::{
+use yookassa_sdk_rs::{Auth, YookassaClient};
+use yookassa_sdk_rs::model::{
     ConfirmationData, CreatePaymentRequest, CurrencyCode, Locale, MonetaryAmount,
 };
 
@@ -81,7 +81,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 `yookassa-sdk-rs` supports both authentication modes exposed by YooKassa:
 
 ```rust
-use yookasa_sdk::Auth;
+use yookassa_sdk_rs::Auth;
 
 let basic = Auth::basic("shop_id", "secret_key");
 let oauth = Auth::oauth("oauth_token");
@@ -93,7 +93,7 @@ let oauth = Auth::oauth("oauth_token");
 
 ```rust
 use std::time::Duration;
-use yookasa_sdk::{Auth, YookassaClient};
+use yookassa_sdk_rs::{Auth, YookassaClient};
 
 let client = YookassaClient::builder(Auth::basic("shop_id", "secret_key"))
     .timeout(Duration::from_secs(15))
@@ -144,7 +144,7 @@ The main error variants are:
 Example:
 
 ```rust
-use yookasa_sdk::{ErrorCode, YookassaError};
+use yookassa_sdk_rs::{ErrorCode, YookassaError};
 
 match client.get_payment(&"payment_id".into()).await {
     Ok(payment) => println!("{}", payment.id.as_ref()),
@@ -194,8 +194,8 @@ rust_decimal = "1"
 
 ```rust
 use rust_decimal::Decimal;
-use yookasa_sdk::{Auth, YookassaClient};
-use yookasa_sdk::model::{
+use yookassa_sdk_rs::{Auth, YookassaClient};
+use yookassa_sdk_rs::model::{
     ConfirmationData, CreatePaymentRequest, CurrencyCode, Locale, MonetaryAmount,
 };
 
@@ -244,7 +244,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 Поддерживаются оба режима аутентификации YooKassa:
 
 ```rust
-use yookasa_sdk::Auth;
+use yookassa_sdk_rs::Auth;
 
 let basic = Auth::basic("shop_id", "secret_key");
 let oauth = Auth::oauth("oauth_token");
@@ -256,7 +256,7 @@ let oauth = Auth::oauth("oauth_token");
 
 ```rust
 use std::time::Duration;
-use yookasa_sdk::{Auth, YookassaClient};
+use yookassa_sdk_rs::{Auth, YookassaClient};
 
 let client = YookassaClient::builder(Auth::basic("shop_id", "secret_key"))
     .timeout(Duration::from_secs(15))
@@ -307,7 +307,7 @@ Result<T, YookassaError>
 Пример:
 
 ```rust
-use yookasa_sdk::{ErrorCode, YookassaError};
+use yookassa_sdk_rs::{ErrorCode, YookassaError};
 
 match client.get_payment(&"payment_id".into()).await {
     Ok(payment) => println!("{}", payment.id.as_ref()),

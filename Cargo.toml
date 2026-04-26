@@ -2,7 +2,7 @@
 name = "yookassa-sdk-rs"
 version = "0.1.0"
 edition = "2024"
-description = "The SDK for working with Yookasa-API"
+description = "The SDK for working with Yookassa-API"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 keywords = ["rust", "library", "sdk", "yookassa", "api"]
@@ -12,6 +12,9 @@ categories = [
     "web-programming::http-client"
 ]
 repository = "https://github.com/DaimonCity/yookassa-sdk"
+
+[lib]
+name = "yookassa_sdk_rs"
 
 [dependencies]
 chrono = { version = "0.4", features = ["serde"] }
