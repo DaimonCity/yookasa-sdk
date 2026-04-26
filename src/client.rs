@@ -28,7 +28,7 @@ impl YookassaClientBuilder {
             auth,
             base_url: DEFAULT_BASE_URL.to_string(),
             timeout: None,
-            user_agent: Some(format!("yookasa-sdk/{}", env!("CARGO_PKG_VERSION"))),
+            user_agent: Some(format!("yookassa-sdk-rs/{}", env!("CARGO_PKG_VERSION"))),
         }
     }
 
