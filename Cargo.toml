@@ -6,7 +6,11 @@ description = "The SDK for working with Yookasa-API"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 keywords = ["rust", "library", "sdk", "yookassa", "api"]
-categories = ["development-tools, sdk"]
+categories = [
+    "api-bindings",
+    "web-programming",
+    "web-programming::http-client"
+]
 repository = "https://github.com/DaimonCity/yookasa-sdk"
 
 [dependencies]
