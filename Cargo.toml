@@ -1,5 +1,5 @@
 [package]
-name = "yookasa-sdk"
+name = "yookassa-sdk-rs"
 version = "0.1.0"
 edition = "2024"
 description = "The SDK for working with Yookasa-API"
@@ -11,7 +11,7 @@ categories = [
     "web-programming",
     "web-programming::http-client"
 ]
-repository = "https://github.com/DaimonCity/yookasa-sdk"
+repository = "https://github.com/DaimonCity/yookassa-sdk"
 
 [dependencies]
 chrono = { version = "0.4", features = ["serde"] }

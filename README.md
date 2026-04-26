@@ -1,8 +1,8 @@
-# yookasa-sdk
+# yookassa-sdk
 
 Async Rust SDK for the [YooKassa HTTP API](https://yookassa.ru/developers/api).
 
-`yookasa-sdk` provides a typed client for common YooKassa resources, including payments, refunds, payment methods, deals, invoices, payouts, receipts, webhooks, and `me`.
+`yookassa-sdk-rs` provides a typed client for common YooKassa resources, including payments, refunds, payment methods, deals, invoices, payouts, receipts, webhooks, and `me`.
 
 - Official API docs: <https://yookassa.ru/developers/api>
 - OpenAPI specification: <https://yookassa.ru/developers/api/yookassa-openapi-specification.yaml>
@@ -23,7 +23,7 @@ Async Rust SDK for the [YooKassa HTTP API](https://yookassa.ru/developers/api).
 
 ```toml
 [dependencies]
-yookasa-sdk = "0.1.0"
+yookassa-sdk-rs = "0.1.0"
 rust_decimal = "1"
 ```
 
@@ -78,7 +78,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 ### Authentication
 
-`yookasa-sdk` supports both authentication modes exposed by YooKassa:
+`yookassa-sdk-rs` supports both authentication modes exposed by YooKassa:
 
 ```rust
 use yookasa_sdk::Auth;
@@ -170,7 +170,7 @@ match client.get_payment(&"payment_id".into()).await {
 
 ### Что это
 
-`yookasa-sdk` — асинхронный Rust SDK для работы с HTTP API YooKassa.
+`yookassa-sdk-rs` — асинхронный Rust SDK для работы с HTTP API YooKassa.
 
 Crate предоставляет:
 
@@ -186,7 +186,7 @@ Crate предоставляет:
 
 ```toml
 [dependencies]
-yookasa-sdk = "0.1.0"
+yookassa-sdk-rs = "0.1.0"
 rust_decimal = "1"
 ```
 

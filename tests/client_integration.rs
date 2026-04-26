@@ -6,12 +6,12 @@ use std::thread;
 
 use rust_decimal::Decimal;
 use serde_json::{Value, json};
-use yookasa_sdk::model::{
+use yookassa_sdk_rs::model::{
     ConfirmationData, CreatePaymentRequest, CreateWebhookRequest, CurrencyCode, Locale,
     MonetaryAmount, NotificationEventType, PaymentId, PaymentListQuery, PaymentStatus, Recipient,
     TimeFilter,
 };
-use yookasa_sdk::{ApiErrorBody, Auth, ErrorCode, YookassaClient, YookassaError};
+use yookassa_sdk_rs::{ApiErrorBody, Auth, ErrorCode, YookassaClient, YookassaError};
 
 #[derive(Debug)]
 struct CapturedRequest {
