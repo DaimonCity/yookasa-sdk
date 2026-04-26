@@ -1,5 +1,5 @@
 [package]
-name = "yookasa-sdk"
+name = "yookassa-sdk-rs"
 version = "0.1.0"
 edition = "2024"
 description = "The SDK for working with Yookasa-API"
