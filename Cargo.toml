@@ -2,14 +2,26 @@
 name = "yookasa-sdk"
 version = "0.1.0"
 edition = "2024"
+description = "The SDK for working with Yookasa-API"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["rust", "library", "sdk", "yookassa", "api"]
+categories = ["development-tools, sdk"]
+repository = "https://github.com/DaimonCity/yookasa-sdk"
 
 [dependencies]
-chrono = { version = "0.4.44", features = ["serde"] }
-reqwest = { version = "0.13.2", default-features = false, features = ["json", "rustls", "query"] }
-rust_decimal = { version = "1.41.0", features = ["serde-with-str"] }
-serde = { version = "1.0.228", features = ["derive"] }
-serde_json = "1.0.149"
-serde_with = "3.18.0"
-thiserror = "2.0.17"
-tokio = { version = "1.50.0", features = ["macros", "rt-multi-thread"] }
-uuid = { version = "1.22.0", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+reqwest = {
+    version = "0.13",
+    default-features = false,
+    features = ["json", "rustls", "query"]
+}
+rust_decimal = { version = "1", features = ["serde-with-str"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_with = "3"
+thiserror = "2"
+uuid = { version = "1", features = ["v4", "serde"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
