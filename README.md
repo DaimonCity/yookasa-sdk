@@ -24,7 +24,6 @@ Async Rust SDK for the [YooKassa HTTP API](https://yookassa.ru/developers/api).
 ```toml
 [dependencies]
 yookasa-sdk = "0.1.0"
-tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 rust_decimal = "1"
 ```
 
@@ -164,7 +163,6 @@ match client.get_payment(&"payment_id".into()).await {
 - Money is represented by `MonetaryAmount` and serialized as a string amount, for example `"100.00"`.
 - IDs are represented as newtype wrappers over `String`, such as `PaymentId`, `RefundId`, `WebhookId`, and others.
 - Some less frequently used nested YooKassa objects are still represented as `serde_json::Value` instead of fully typed structs.
-- The crate follows the current implementation, not a generated client from the full OpenAPI spec.
 
 ---
 
@@ -189,7 +187,6 @@ Crate предоставляет:
 ```toml
 [dependencies]
 yookasa-sdk = "0.1.0"
-tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 rust_decimal = "1"
 ```
 
@@ -290,8 +287,6 @@ let client = YookassaClient::builder(Auth::basic("shop_id", "secret_key"))
 - webhook
 - `me`
 
-Полный публичный API лучше смотреть через Rustdoc и экспорт `yookasa_sdk::model::*`.
-
 ### Обработка ошибок
 
 Все асинхронные методы клиента возвращают:
@@ -331,4 +326,3 @@ match client.get_payment(&"payment_id".into()).await {
 - Денежные суммы представлены типом `MonetaryAmount` и сериализуются строкой, например `"100.00"`.
 - Идентификаторы представлены newtype-обертками над `String`: `PaymentId`, `RefundId`, `WebhookId` и другие.
 - Некоторые редкие вложенные объекты YooKassa пока остаются в виде `serde_json::Value`, а не полностью типизированных структур.
-- Это не сгенерированный OpenAPI-клиент, а вручную поддерживаемый SDK с типами для основных сценариев.
