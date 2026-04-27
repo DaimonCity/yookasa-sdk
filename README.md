@@ -23,7 +23,7 @@ Async Rust SDK for the [YooKassa HTTP API](https://yookassa.ru/developers/api).
 
 ```toml
 [dependencies]
-yookassa-sdk-rs = "0.1.0"
+yookassa-sdk-rs = "0.1.1"
 rust_decimal = "1"
 ```
 
@@ -186,7 +186,7 @@ Crate предоставляет:
 
 ```toml
 [dependencies]
-yookassa-sdk-rs = "0.1.0"
+yookassa-sdk-rs = "0.1.1"
 rust_decimal = "1"
 ```
 
